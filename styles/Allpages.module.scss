@@ -1,0 +1,20 @@
+.hero_home {
+  width: 100%;
+  height: 60vh;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  div {
+    h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 6vw;
+      font-weight: 600;
+      background-color: #000000;
+      border-radius: 5px;
+      padding: 0px 10px 0 10px;
+    }
+  }
+}
