@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function RootLayout({ children }) {
   return (
-    <div>
+    <body>
       <nav>
         <div
           style={{
@@ -75,6 +75,6 @@ export default function RootLayout({ children }) {
         </div>
       </nav>
       <section>{children}</section>
-    </div>
+    </body>
   );
 }
