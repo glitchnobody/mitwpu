@@ -11,6 +11,7 @@ import p5 from "./p5.jpeg";
 import p6 from "./p6.jpeg";
 import p7 from "./p7.jpeg";
 import p8 from "./p8.png";
+import Link from "next/link";
 
 export default function Page() {
   return (
