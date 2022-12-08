@@ -11,6 +11,7 @@ import p5 from "./p5.jpeg";
 import p6 from "./p6.jpeg";
 import p7 from "./p7.jpeg";
 import p8 from "./p8.png";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -45,7 +46,9 @@ export default function Page() {
             dep="SY PD"
             name="lorem Ipsum"
           />
-          <Photo src={p5} by="Sonny Stevens" dep="TY PD" name="lorem Ipsum" />
+          <Link href="/psroh">
+            <Photo src={p5} by="Sonny Stevens" dep="TY PD" name="lorem Ipsum" />
+          </Link>
           <Photo src={p6} by="Tyler Lucero" dep="FNY PD" name="lorem Ipsum" />
           <Photo src={p7} by="Cedric Mooney" dep="TY PD" name="lorem Ipsum" />
           <Photo

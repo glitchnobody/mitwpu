@@ -44,7 +44,9 @@ export default function Page() {
             dep="SY VC"
             name="lorem Ipsum"
           />
-          <Photo src={p5} by="Sonny Stevens" dep="TY VC" name="lorem Ipsum" />
+          <Link href="/psroh">
+            <Photo src={p5} by="Sonny Stevens" dep="TY PD" name="lorem Ipsum" />
+          </Link>
           <Photo src={p6} by="Tyler Lucero" dep="FNY VC" name="lorem Ipsum" />
           <Photo
             src={p7}

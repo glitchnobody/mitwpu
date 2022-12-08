@@ -17,7 +17,7 @@ export default function Page() {
     <div>
       <div className={style.hero_home}>
         <div>
-          <h1>Jewelry Design</h1>
+          <h1>Jewellery Design</h1>
         </div>
         <Image
           style={{

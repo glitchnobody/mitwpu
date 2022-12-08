@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function RootLayout({ children }) {
+  const [isToggled, setIsToggled] = useState(false);
+
   return (
     <body>
       <nav>
@@ -41,7 +43,7 @@ export default function RootLayout({ children }) {
               ></Image>
             </div>
             <div className={style.submit}>
-              <button>Submit Work</button>
+              <button onClick={() => setIsToggled(true)}>Submit Work</button>
             </div>
           </div>
         </div>
@@ -60,10 +62,10 @@ export default function RootLayout({ children }) {
               <li>Visual Communication</li>
             </Link>
             <Link href="/FashionandAparell">
-              <li>Fashion and Aparell</li>
+              <li>Fashion and Apparel</li>
             </Link>
             <Link href="/JewelryDesign">
-              <li>Jewelry Design</li>
+              <li>Jewellery Design</li>
             </Link>
             <Link href="/InteriorDesign">
               <li>Interior Design</li>
@@ -74,6 +76,28 @@ export default function RootLayout({ children }) {
           </ul>
         </div>
       </nav>
+      {isToggled && (
+        <div className={style.modal}>
+          <div className={style.modal_innner}>
+            <div
+              className={style.modal_close}
+              onClick={() => setIsToggled(false)}
+            >
+              X
+            </div>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScbfyNai_E-r90Y4yCLD2O5dRfEhTllO2oRwvkS86Gc1x884w/viewform?embedded=true"
+              width="100%"
+              height="90%"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            >
+              Loading…
+            </iframe>
+          </div>
+        </div>
+      )}
       <section>{children}</section>
     </body>
   );
