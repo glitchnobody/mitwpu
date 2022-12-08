@@ -1,15 +1,15 @@
-import "../styles/globals.css";
-import style from "../styles/Allpages.module.scss";
-import Hero from "../public/break.jpg";
-import Photo from "../components/Photo.js";
+import "../../styles/globals.css";
+import style from "../../styles/Allpages.module.scss";
 import Image from "next/image";
+import Hero from "../../public/break.jpg";
+import Photo from "../../components/Photo.js";
 
 export default function Page() {
   return (
     <div>
       <div className={style.hero_home}>
         <div>
-          <h1>MIT SOD Gallery</h1>
+          <h1>Visual Communication</h1>
         </div>
         <Image
           style={{
@@ -20,6 +20,7 @@ export default function Page() {
           alt="logo mitwpu SOD"
         ></Image>
       </div>
+
       <div className={style.display_grid_container}>
         <div className={style.display_grid}>
           <Photo src={Hero} by="John Doe" dep="FY UX" name="clouds" />

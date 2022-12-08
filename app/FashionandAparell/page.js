@@ -1,15 +1,15 @@
-import "../styles/globals.css";
-import style from "../styles/Allpages.module.scss";
-import Hero from "../public/break.jpg";
-import Photo from "../components/Photo.js";
+import "../../styles/globals.css";
+import style from "../../styles/Allpages.module.scss";
 import Image from "next/image";
+import Hero from "../../public/break.jpg";
+import Photo from "../../components/Photo.js";
 
 export default function Page() {
   return (
     <div>
       <div className={style.hero_home}>
         <div>
-          <h1>MIT SOD Gallery</h1>
+          <h1>Fashion and Aparell</h1>
         </div>
         <Image
           style={{

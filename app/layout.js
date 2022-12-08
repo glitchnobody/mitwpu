@@ -1,11 +1,13 @@
+"use client";
 import style from "../styles/Menu.module.scss";
 import Image from "next/image";
 import logo from "../public/logo_menu.png";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function RootLayout({ children }) {
   return (
-    <html>
-      <head />
+    <div>
       <nav>
         <div
           style={{
@@ -29,10 +31,12 @@ export default function RootLayout({ children }) {
           >
             <div className={style.logo}>
               <Image
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "center left",
+                }}
                 src={logo}
                 fill
-                objectFit="contain"
-                objectPosition="center left"
                 alt="logo mitwpu SOD"
               ></Image>
             </div>
@@ -43,17 +47,34 @@ export default function RootLayout({ children }) {
         </div>
         <div className={style.stream}>
           <ul>
-            <li style={{ marginLeft: "3px" }}>Home |</li>
-            <li>Product Design</li>
-            <li>User Experience</li>
-            <li>Visual Communication</li>
-            <li>Fashion and Aparell</li>
-            <li>Jewelry Design</li>
-            <li>Interior Design</li>
+            <Link href="/">
+              <li style={{ marginLeft: "3px" }}>Home |</li>
+            </Link>
+            <Link href="/ProductDesign">
+              <li>Product Design</li>
+            </Link>
+            <Link href="/UserExperience">
+              <li>User Experience</li>
+            </Link>
+            <Link href="/VisualCommunication">
+              <li>Visual Communication</li>
+            </Link>
+            <Link href="/FashionandAparell">
+              <li>Fashion and Aparell</li>
+            </Link>
+            <Link href="/JewelryDesign">
+              <li>Jewelry Design</li>
+            </Link>
+            <Link href="/InteriorDesign">
+              <li>Interior Design</li>
+            </Link>
+            <Link href="/OtherWork">
+              <li>Other Work</li>
+            </Link>
           </ul>
         </div>
       </nav>
       <section>{children}</section>
-    </html>
+    </div>
   );
 }
